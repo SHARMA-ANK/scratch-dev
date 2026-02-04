@@ -1,0 +1,1148 @@
+.react-calendar {
+    width: 350px;
+    max-width: 100%;
+    background: #fff;
+    border: 1px solid #a0a096;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.125em;
+}
+
+.react-calendar--doubleView {
+    width: 700px;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer {
+    display: flex;
+    margin: -0.5em;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer > * {
+    width: 50%;
+    margin: 0.5em;
+}
+
+.react-calendar,
+.react-calendar *,
+.react-calendar :after,
+.react-calendar :before {
+    box-sizing: border-box;
+}
+
+.react-calendar button {
+    margin: 0;
+    border: 0;
+    outline: none;
+}
+
+.react-calendar button:enabled:hover {
+    cursor: pointer;
+}
+
+.react-calendar__navigation {
+    display: flex;
+    height: 44px;
+    margin-bottom: 1em;
+}
+
+.react-calendar__navigation button {
+    min-width: 44px;
+    background: none;
+}
+
+.react-calendar__navigation button:disabled {
+    background-color: #f0f0f0;
+}
+
+.react-calendar__navigation button:enabled:focus,
+.react-calendar__navigation button:enabled:hover {
+    background-color: #e6e6e6;
+}
+
+.react-calendar__month-view__weekdays {
+    text-align: center;
+    text-transform: uppercase;
+    font: inherit;
+    font-size: 0.75em;
+    font-weight: 700;
+}
+
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: inherit;
+    font-size: 0.75em;
+    font-weight: 700;
+}
+
+.react-calendar__month-view__days__day--weekend {
+    color: #d10000;
+}
+
+.react-calendar__century-view__decades__decade--neighboringCentury,
+.react-calendar__decade-view__years__year--neighboringDecade,
+.react-calendar__month-view__days__day--neighboringMonth {
+    color: #757575;
+}
+
+.react-calendar__century-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__year-view .react-calendar__tile {
+    padding: 2em 0.5em;
+}
+
+.react-calendar__tile {
+    max-width: 100%;
+    padding: 10px 6.6667px;
+    background: none;
+    text-align: center;
+    font: inherit;
+    font-size: 0.833em;
+}
+
+.react-calendar__tile:disabled {
+    background-color: #f0f0f0;
+    color: #ababab;
+}
+
+.react-calendar__century-view__decades__decade--neighboringCentury:disabled,
+.react-calendar__decade-view__years__year--neighboringDecade:disabled,
+.react-calendar__month-view__days__day--neighboringMonth:disabled {
+    color: #cdcdcd;
+}
+
+.react-calendar__tile:enabled:focus,
+.react-calendar__tile:enabled:hover {
+    background-color: #e6e6e6;
+}
+
+.react-calendar__tile--now {
+    background: #ffff76;
+}
+
+.react-calendar__tile--now:enabled:focus,
+.react-calendar__tile--now:enabled:hover {
+    background: #ffffa9;
+}
+
+.react-calendar__tile--hasActive {
+    background: #76baff;
+}
+
+.react-calendar__tile--hasActive:enabled:focus,
+.react-calendar__tile--hasActive:enabled:hover {
+    background: #a9d4ff;
+}
+
+.react-calendar__tile--active {
+    background: #006edc;
+    color: #fff;
+}
+
+.react-calendar__tile--active:enabled:focus,
+.react-calendar__tile--active:enabled:hover {
+    background: #1087ff;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover {
+    background-color: #e6e6e6;
+}
+
+.mf-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 250;
+    direction: ltr;
+    contain: layout style size;
+    pointer-events: none;
+    transition:
+        opacity 0.3s,
+        color 0.4s;
+}
+
+.mf-cursor:before {
+    content: "";
+    position: absolute;
+    top: -24px;
+    left: -24px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    transform: scale(0.2);
+    background: currentColor;
+    transition:
+        transform 0.25s ease-in-out,
+        opacity 0.1s;
+}
+
+.mf-cursor.-inverse {
+    color: #fff;
+}
+
+@supports (mix-blend-mode: exclusion) {
+    .mf-cursor.-exclusion {
+        mix-blend-mode: exclusion;
+    }
+    .mf-cursor.-exclusion:before {
+        background: #fff;
+    }
+}
+
+.mf-cursor.-pointer:before {
+    transform: scale(0.15);
+}
+
+.mf-cursor.-text:before {
+    opacity: 0.85;
+    transform: scale(1.7);
+}
+
+.mf-cursor.-text.-active:before {
+    transform: scale(1.6);
+    transition-duration: 0.2s;
+}
+
+.mf-cursor.-icon:before {
+    transform: scale(1.5);
+}
+
+.mf-cursor.-icon.-active:before {
+    transform: scale(1.4);
+}
+
+.mf-cursor.-hidden:before {
+    transform: scale(0);
+}
+
+.mf-cursor-text {
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0) rotate(10deg);
+    opacity: 0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    transition:
+        opacity 0.4s,
+        transform 0.3s;
+}
+
+.mf-cursor.-icon .mf-cursor-text,
+.mf-cursor.-text .mf-cursor-text {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.mf-cursor-media {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    margin: -200px 0 0 -200px;
+}
+
+.mf-cursor-media img,
+.mf-cursor-media video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+@supports (object-fit: cover) {
+    .mf-cursor-media img,
+    .mf-cursor-media video {
+        position: static;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translateZ(0);
+    }
+}
+
+.mf-cursor-media-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: scale(0) translateZ(0);
+    padding: 1px;
+    opacity: 0;
+    border-radius: 50%;
+    transition:
+        transform 0.35s,
+        opacity 0.2s 0.2s;
+}
+
+.mf-cursor.-media .mf-cursor-media-box {
+    opacity: 1;
+    transform: scale(0.696);
+    transition-duration: 0.4s, 0.4s;
+    transition-delay: 0s, 0s;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    background: none;
+}
+
+button,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    -webkit-padding-start: 0;
+    padding-inline-start: 0;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+textarea {
+    font-family: inherit;
+    background: none;
+    border: none;
+    outline: none;
+    max-width: 100%;
+    resize: none;
+}
+
+input::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+span {
+    font: inherit;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    overscroll-behavior: none;
+    scroll-behavior: auto;
+    background: #fff;
+}
+
+.container {
+    max-width: 1688px;
+}
+
+.container-blog {
+    max-width: 1238px;
+}
+
+.container-expanded {
+    max-width: 1720px;
+}
+
+.container,
+.container-blog,
+.container-expanded {
+    width: 100%;
+    padding-inline: 40px;
+    margin-inline: auto;
+}
+
+.static_marquee {
+    position: absolute;
+    right: 0;
+    top: 0;
+    object-fit: contain;
+    object-position: right center;
+    mix-blend-mode: darken;
+    rotate: -1.5deg;
+    width: 100%;
+    height: 105%;
+}
+
+@media (min-width: 1660px) {
+    .static_marquee {
+        width: 90%;
+        right: -3%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .static_marquee {
+        width: 100%;
+        right: -5%;
+    }
+}
+
+@media (min-width: 2000px) {
+    .static_marquee {
+        right: -8%;
+    }
+}
+
+@media (min-width: 2300px) {
+    .static_marquee {
+        right: -10%;
+    }
+}
+
+.static_marquee {
+    pointer-events: none;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.fp-watermark {
+    display: none !important;
+}
+
+.fp-overflow {
+    height: 100%;
+    width: 100%;
+}
+
+#company .fp-overflow {
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    z-index: 2;
+}
+
+#company #transition-video {
+    opacity: 1 !important;
+}
+
+#services .fp-overflow {
+    overflow: hidden !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#company #video {
+    opacity: 1 !important;
+}
+
+#hero {
+    overflow: unset !important;
+}
+
+#newsletter .container {
+    padding-block: 90px !important;
+}
+
+@media screen and (max-width: 1366px) {
+    .container-blog {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .container,
+    .container-blog,
+    .container-expanded {
+        padding: 0 25px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container,
+    .container-blog,
+    .container-expanded {
+        padding: 0 15px;
+    }
+}
+
+@font-face {
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/PlusJakartaSans-Regular.woff2)
+            format("woff2"),
+        url(/fonts/PlusJakartaSans-Regular.woff) format("woff"),
+        url(/fonts/PlusJakartaSans-Regular.ttf) format("truetype"),
+        url(/fonts/PlusJakartaSans-Regular.eot) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: Plus Jakarta Sans;
+    font-weight: 500;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/PlusJakartaSans-Medium.woff2)
+            format("woff2"),
+        url(/fonts/PlusJakartaSans-Medium.woff) format("woff"),
+        url(/fonts/PlusJakartaSans-Medium.ttf) format("truetype"),
+        url(/fonts/PlusJakartaSans-Medium.eot) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/PlusJakartaSans-SemiBold.woff2)
+            format("woff2"),
+        url(/fonts/PlusJakartaSans-SemiBold.woff) format("woff"),
+        url(/fonts/PlusJakartaSans-SemiBold.ttf) format("truetype"),
+        url(/fonts/PlusJakartaSans-SemiBold.eot) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: Plus Jakarta Sans;
+    font-weight: 700;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/PlusJakartaSans-Bold.woff2)
+            format("woff2"),
+        url(/fonts/PlusJakartaSans-Bold.woff) format("woff"),
+        url(/fonts/PlusJakartaSans-Bold.ttf) format("truetype"),
+        url(/fonts/PlusJakartaSans-Bold.eot) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: Helvetica Neue;
+    font-weight: 300;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/HelveticaNeueCyr-Light.woff2)
+            format("woff2"),
+        url(/fonts/HelveticaNeueCyr-Light.woff) format("woff"),
+        url(/fonts/HelveticaNeueCyr-Light.ttf) format("truetype"),
+        url(/fonts/HelveticaNeueCyr-Light.eot) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: Helvetica Neue;
+    font-weight: 500;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/HelveticaNeueCyr-Medium.woff2)
+            format("woff2"),
+        url(/fonts/HelveticaNeueCyr-Medium.woff) format("woff"),
+        url(/fonts/HelveticaNeueCyr-Medium.ttf) format("truetype"),
+        url(/fonts/HelveticaNeueCyr-Medium.eot) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: HeliosExtC;
+    font-weight: 700;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/HeliosExtC.woff2) format("woff2"),
+        url(/fonts/HeliosExtC.woff) format("woff"),
+        url(/fonts/HeliosExtC.ttf) format("truetype"),
+        url(/fonts/HeliosExtC.eot) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/Inter-Regular.woff2) format("woff2"),
+        url(/fonts/Inter-Regular.woff) format("woff"),
+        url(/fonts/Inter-Regular.ttf) format("truetype"),
+        url(/fonts/Inter-Regular.eot) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/Inter-Medium.woff2) format("woff2"),
+        url(/fonts/Inter-Medium.woff) format("woff"),
+        url(/fonts/Inter-Medium.ttf) format("truetype"),
+        url(/fonts/Inter-Medium.eot) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: Inter;
+    font-weight: 600;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/Inter-SemiBold.woff2) format("woff2"),
+        url(/fonts/Inter-SemiBold.woff) format("woff"),
+        url(/fonts/Inter-SemiBold.ttf) format("truetype"),
+        url(/fonts/Inter-SemiBold.eot) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: Inter;
+    font-weight: 700;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/Inter-Bold.woff2) format("woff2"),
+        url(/fonts/Inter-Bold.woff) format("woff"),
+        url(/fonts/Inter-Bold.ttf) format("truetype"),
+        url(/fonts/Inter-Bold.eot) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: Freigeist Con;
+    font-weight: 400;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/Fontspring-DEMO-freigeist-conregular.woff2)
+            format("woff2"),
+        url(/fonts/Fontspring-DEMO-freigeist-conregular.woff) format("woff"),
+        url(/fonts/Fontspring-DEMO-freigeist-conregular.otf) format("opentype"),
+        url(/fonts/Fontspring-DEMO-freigeist-conregular.eot)
+            format("embedded-opentype");
+}
+
+@font-face {
+    font-family: Freigeist Con;
+    font-weight: 700;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/Fontspring-DEMO-freigeist-conbold.woff2)
+            format("woff2"),
+        url(/fonts/Fontspring-DEMO-freigeist-conbold.woff) format("woff"),
+        url(/fonts/Fontspring-DEMO-freigeist-conbold.otf) format("opentype"),
+        url(/fonts/Fontspring-DEMO-freigeist-conbold.eot)
+            format("embedded-opentype");
+}
+
+@font-face {
+    font-family: Freigeist Con;
+    font-weight: 700;
+    font-style: italic;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/Fontspring-DEMO-freigeist-conbolditalic.woff2)
+            format("woff2"),
+        url(/fonts/Fontspring-DEMO-freigeist-conbolditalic.woff) format("woff"),
+        url(/fonts/Fontspring-DEMO-freigeist-conbolditalic.otf)
+            format("opentype"),
+        url(/fonts/Fontspring-DEMO-freigeist-conbolditalic.eot)
+            format("embedded-opentype");
+}
+
+@font-face {
+    font-family: TT Commons Pro;
+    font-weight: 400;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/TTCommons-Pro-DemiBold-Regular.woff2)
+            format("woff2"),
+        url(/fonts/TTCommons-Pro-DemiBold-Regular.woff) format("woff"),
+        url(/fonts/TTCommons-Pro-DemiBold-Regular.otf) format("opentype"),
+        url(/fonts/TTCommons-Pro-DemiBold-Regular.eot)
+            format("embedded-opentype");
+}
+
+@font-face {
+    font-family: TT Commons Pro;
+    font-weight: 600;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/Fontspring-DEMO-tt_commons_pro_demibold.woff2)
+            format("woff2"),
+        url(/fonts/Fontspring-DEMO-tt_commons_pro_demibold.woff) format("woff"),
+        url(/fonts/Fontspring-DEMO-tt_commons_pro_demibold.otf)
+            format("opentype"),
+        url(/fonts/Fontspring-DEMO-tt_commons_pro_demibold.eot)
+            format("embedded-opentype");
+}
+
+@font-face {
+    font-family: Mazzard;
+    font-weight: 500;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/MazzardH-Medium.woff2) format("woff2"),
+        url(/fonts/MazzardH-Medium.woff) format("woff"),
+        url(/fonts/MazzardH-Medium.ttf) format("truetype"),
+        url(/fonts/MazzardH-Medium.eot) format("embedded-opentype");
+}
+
+@font-face {
+    font-family: "Cedarville Cursive";
+    font-weight: 400;
+    font-style: normal;
+    src:
+        url(/awsmd.com/awsmd.com/fonts/Cedarville-Cursive.woff2) format("woff2"),
+        url(/fonts/Cedarville-Cursive.woff) format("woff"),
+        url(/fonts/Cedarville-Cursive.ttf) format("truetype"),
+        url(/fonts/Cedarville-Cursive.eot) format("embedded-opentype");
+}
+
+.blog-pagination-bullet {
+    width: 32px;
+    height: 4px;
+    display: block;
+    margin-inline: 3px;
+    background: #6a6a6a;
+    border-radius: 40px;
+    transition: background 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.blog-pagination-bullet_active {
+    opacity: 0.4;
+}
+
+.blog-pagination-bullet.swiper-pagination-bullet-active {
+    background: #fff;
+    cursor: default;
+}
+
+.fade-y {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 0.3s ease-in-out;
+}
+
+.def-anim.animate .def-suptitle,
+.def-anim.animate .def-text span,
+.def-anim.animate .def-title > span > span,
+.fade-y.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.def-anim .def-title > span > span {
+    display: inline-block;
+    transform: translateY(25px);
+    opacity: 0;
+    transition: 0.6s ease-in-out;
+    transition-property: opacity, transform;
+}
+
+.def-anim .def-title > span > span:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.def-anim .def-title > span > span:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.def-anim .def-suptitle {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.def-anim .def-text {
+    overflow: hidden;
+}
+
+.def-anim .def-text span {
+    display: inline-block;
+    transform: translateY(25px);
+    opacity: 0;
+    transition: 0.8s ease-in-out;
+    transition-property: opacity, transform;
+}
+
+.mf-cursor:before {
+    border-radius: 50%;
+    background: #4541f1 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .mf-cursor {
+        display: none !important;
+    }
+}
+
+.react-calendar {
+    font-family: Plus Jakarta Sans;
+    width: 300px;
+}
+
+@media screen and (max-width: 360px) {
+    .react-calendar {
+        width: 280px;
+    }
+}
+
+.react-calendar__navigation {
+    margin-bottom: 0;
+}
+
+.react-calendar__month-view__weekdays {
+    padding: 10px;
+    background: #2e2f30;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+    background: #2e2f30;
+    padding: 0.5em;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+    text-decoration: none;
+    color: #f6f6f6;
+}
+
+.react-calendar__month-view__days {
+    padding: 10px;
+}
+
+.react-calendar__month-view__days__day {
+    color: #2e2f30;
+    background: rgba(0, 0, 0, 0);
+}
+
+.react-calendar__month-view__days__day:disabled {
+    opacity: 0.4;
+    background: rgba(0, 0, 0, 0);
+}
+
+.react-calendar__tile--active {
+    background: #ff7750;
+}
+
+.react-calendar__tile--active abbr {
+    color: #fff;
+}
+
+.react-calendar__tile--active:enabled:focus,
+.react-calendar__tile--active:enabled:hover {
+    background: #ff7750;
+}
+
+.react-calendar__tile--active:enabled:focus abbr,
+.react-calendar__tile--active:enabled:hover abbr {
+    color: #fff;
+}
+
+.react-calendar__tile:enabled {
+    border-radius: 50%;
+    width: 39px;
+    height: 39px;
+}
+
+.react-calendar__navigation__label {
+    text-align: left;
+    padding-left: 1.2em;
+    font-weight: 700;
+    order: -1;
+}
+
+.react-calendar__navigation__arrow:disabled {
+    opacity: 0.3;
+    background: rgba(0, 0, 0, 0) !important;
+}
+
+.react-calendar__long-arrow-prev {
+    transform: scaleX(-1);
+}
+
+.react-calendar__long-arrow-next,
+.react-calendar__long-arrow-prev {
+    width: 16px;
+    height: 16px;
+    stroke: #000;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+:root {
+    --swiper-theme-color: #007aff;
+}
+
+:host {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+}
+
+.swiper-vertical > .swiper-wrapper {
+    flex-direction: column;
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    transition-timing-function: var(
+        --swiper-wrapper-transition-timing-function,
+        initial
+    );
+    box-sizing: content-box;
+}
+
+.swiper-android .swiper-slide,
+.swiper-ios .swiper-slide,
+.swiper-wrapper {
+    transform: translateZ(0);
+}
+
+.swiper-horizontal {
+    touch-action: pan-y;
+}
+
+.swiper-vertical {
+    touch-action: pan-x;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    display: block;
+}
+
+.swiper-slide-invisible-blank {
+    visibility: hidden;
+}
+
+.swiper-autoheight,
+.swiper-autoheight .swiper-slide {
+    height: auto;
+}
+
+.swiper-autoheight .swiper-wrapper {
+    align-items: flex-start;
+    transition-property: transform, height;
+}
+
+.swiper-backface-hidden .swiper-slide {
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.swiper-3d.swiper-css-mode .swiper-wrapper {
+    perspective: 1200px;
+}
+
+.swiper-3d .swiper-wrapper {
+    transform-style: preserve-3d;
+}
+
+.swiper-3d {
+    perspective: 1200px;
+    .swiper-cube-shadow,
+    .swiper-slide {
+        transform-style: preserve-3d;
+    }
+}
+
+.swiper-css-mode {
+    > .swiper-wrapper {
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    > .swiper-wrapper > .swiper-slide {
+        scroll-snap-align: start start;
+    }
+    &.swiper-horizontal {
+        > .swiper-wrapper {
+            scroll-snap-type: x mandatory;
+        }
+    }
+    &.swiper-vertical {
+        > .swiper-wrapper {
+            scroll-snap-type: y mandatory;
+        }
+    }
+    &.swiper-free-mode {
+        > .swiper-wrapper {
+            scroll-snap-type: none;
+        }
+        > .swiper-wrapper > .swiper-slide {
+            scroll-snap-align: none;
+        }
+    }
+    &.swiper-centered {
+        > .swiper-wrapper:before {
+            content: "";
+            flex-shrink: 0;
+            order: 9999;
+        }
+        > .swiper-wrapper > .swiper-slide {
+            scroll-snap-align: center center;
+            scroll-snap-stop: always;
+        }
+    }
+    &.swiper-centered.swiper-horizontal {
+        > .swiper-wrapper > .swiper-slide:first-child {
+            -webkit-margin-start: var(--swiper-centered-offset-before);
+            margin-inline-start: var(--swiper-centered-offset-before);
+        }
+        > .swiper-wrapper:before {
+            height: 100%;
+            min-height: 1px;
+            width: var(--swiper-centered-offset-after);
+        }
+    }
+    &.swiper-centered.swiper-vertical {
+        > .swiper-wrapper > .swiper-slide:first-child {
+            -webkit-margin-before: var(--swiper-centered-offset-before);
+            margin-block-start: var(--swiper-centered-offset-before);
+        }
+        > .swiper-wrapper:before {
+            width: 100%;
+            min-width: 1px;
+            height: var(--swiper-centered-offset-after);
+        }
+    }
+}
+
+.swiper-3d {
+    .swiper-slide-shadow,
+    .swiper-slide-shadow-bottom,
+    .swiper-slide-shadow-left,
+    .swiper-slide-shadow-right,
+    .swiper-slide-shadow-top {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 10;
+    }
+    .swiper-slide-shadow {
+        background: rgba(0, 0, 0, 0.15);
+    }
+    .swiper-slide-shadow-left {
+        background-image: linear-gradient(
+            270deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0)
+        );
+    }
+    .swiper-slide-shadow-right {
+        background-image: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0)
+        );
+    }
+    .swiper-slide-shadow-top {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0)
+        );
+    }
+    .swiper-slide-shadow-bottom {
+        background-image: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0)
+        );
+    }
+}
+
+.swiper-lazy-preloader {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -21px;
+    margin-top: -21px;
+    z-index: 10;
+    transform-origin: 50%;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
+    border-top: 4px solid transparent;
+}
+
+.swiper-watch-progress .swiper-slide-visible,
+.swiper:not(.swiper-watch-progress) {
+    .swiper-lazy-preloader {
+        animation: swiper-preloader-spin 1s linear infinite;
+    }
+}
+
+.swiper-lazy-preloader-white {
+    --swiper-preloader-color: #fff;
+}
+
+.swiper-lazy-preloader-black {
+    --swiper-preloader-color: #000;
+}
+
+@keyframes swiper-preloader-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}

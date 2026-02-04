@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Freigeist Con";
+    src: url("/awsmd.com/awsmd.com/fonts/Fontspring-DEMO-freigeist-conregular.woff2")
+        format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Freigeist Con";
+    src: url("/awsmd.com/awsmd.com/fonts/Fontspring-DEMO-freigeist-conbold.woff2")
+        format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Freigeist Con";
+    src: url("/awsmd.com/awsmd.com/fonts/Fontspring-DEMO-freigeist-conbolditalic.woff2")
+        format("woff2");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/awsmd.com/awsmd.com/fonts/Inter-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/awsmd.com/awsmd.com/fonts/Inter-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/awsmd.com/awsmd.com/fonts/Inter-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/awsmd.com/awsmd.com/fonts/Inter-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("/awsmd.com/awsmd.com/fonts/PlusJakartaSans-Regular.woff2")
+        format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("/awsmd.com/awsmd.com/fonts/PlusJakartaSans-Medium.woff2")
+        format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("/awsmd.com/awsmd.com/fonts/PlusJakartaSans-SemiBold.woff2")
+        format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("/awsmd.com/awsmd.com/fonts/PlusJakartaSans-Bold.woff2")
+        format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
