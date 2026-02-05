@@ -103,51 +103,24 @@ const aboutData = {
   ],
 };
 
-const CirclePoint = ({ point, isActive }) => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    // Delay visibility to allow for transition
-    const timer = setTimeout(() => setIsMounted(true), 50);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const isVisible = point.main || (isActive && isMounted);
-
-  // Adjust label position based on point's location on the circle
-  let labelClasses = "absolute whitespace-nowrap font-semibold text-base ";
-  if (point.main) {
-    labelClasses += "left-1/2 -translate-x-1/2 -top-8";
-  } else {
-    // A simple heuristic to position labels inside/outside based on 'right' value
-    const rightValue = parseFloat(point.right);
-    if (rightValue > 80) {
-      labelClasses += "right-4 top-1/2 -translate-y-1/2";
-    } else {
-      labelClasses += "left-4 top-1/2 -translate-y-1/2";
-    }
-  }
+const CirclePoint = ({ point }) => {
+  const baseClass = "about-circle-point_point__QSQD7 absolute";
+  const modifierClass = point.main
+    ? "about-circle-point_pointMain__Ub44Y about-circle_circle_pointMain__3zIYl"
+    : "about-circle_circle_point__Us3Ru";
 
   return (
-    <p
-      className={`absolute transition-opacity duration-300 ease-in-out`}
+    <div
+      className={`${baseClass} ${modifierClass}`}
       style={{
         top: point.top,
         right: point.right,
-        opacity: isVisible ? 1 : 0,
       }}
       data-label={point.label}
-    >
-      <span
-        className={`block rounded-full ${point.main
-          ? "w-3 h-3 bg-blue-500 shadow-[0_0_0_12px_rgba(27,118,255,0.1)]"
-          : "w-1.5 h-1.5 bg-black"
-          }`}
-      ></span>
-      <span className={labelClasses}>{point.label}</span>
-    </p>
+    />
   );
 };
+
 
 const Circle = ({ circle, index, activeIndex, onHover, onLeave }) => {
   // Determine opacity based on hover state of siblings
@@ -170,7 +143,7 @@ const Circle = ({ circle, index, activeIndex, onHover, onLeave }) => {
 
   return (
     <div
-      className={`about-circle_circle__0EHtI about-graph_item__P4WQV absolute rounded-full border transition-all duration-400 ease-in-out`}
+      className={`about-circle_circle__0EHtI about-graph_item__P4WQV absolute rounded-full border transition-all duration-400 ease-in-out ${isHovered ? "about-circle_circleActive__LBZXo" : ""}`}
       style={{
         width: circle.size,
         height: circle.size,
@@ -211,29 +184,35 @@ const AboutUs = () => {
 
   return (
     <div className="container mx-auto px-4 pt-[70px]">
-      <h3 className="title_title___3dKt text-[#999] text-[18px] font-medium leading-[1.05] font-inter">
+      <h3 className="title_title___3dKt">
         02 — About Us
       </h3>
 
-      <div className="about_about_head__4ZGI9 flex items-center justify-between relative mt-[23px] pb-[44px]">
-        {/* Border bottom effect */}
-        <div className="absolute left-0 bottom-0 w-full h-[15px] border border-[rgba(0,0,0,0.2)] border-b-0 pointer-events-none" />
-
-        <h2 className="about_about_head_title__zA_xo text-[40px] md:text-[50px] lg:text-[58px] font-medium leading-[1.02] tracking-[-0.03em] text-black font-inter">
+      <div className="about_about_head__4ZGI9">
+        <h2 className="about_about_head_title__zA_xo">
           We Strive to Innovate
         </h2>
 
-        {/* Button kept hidden or optional based on "ignore become client" vs "this is what i am seeing" conflict. 
-            I'll add it but conditioned out or commented if strictly following the 'ignore' instruction, 
-            but the HTML dump included it. I'll include it to match the HTML structure provided. 
-        */}
-        <button className="button_button__aZ_6A md:flex items-center gap-2 px-6 py-3 rounded-full border border-gray-200 transition-colors hover:bg-gray-50" type="button">
-          <span className="button_button_text__yxufZ text-sm font-medium">Become a Client</span>
-          <span className="w-8 h-8 rounded-full bg-[#eee] flex items-center justify-center relative overflow-hidden">
-            <svg viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3">
+        <button className="button_button__aZ_6A" type="button">
+          <span className="button_button_text__yxufZ">
+            <span>Become a Client</span>
+            <span>Become a Client</span>
+          </span>
+          <span className="button_button_icon__mgDpM">
+            <span className="button_button_icon_dot__QKe2H"></span>
+            <span className="button_button_svgs__XrFT4">
+              <svg viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 6H12M12 6L7 1M12 6L7 11" stroke="currentColor" strokeWidth="1.5"></path>
+              </svg>
+              <svg viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 6H12M12 6L7 1M12 6L7 11" stroke="currentColor" strokeWidth="1.5"></path>
+              </svg>
+            </span>
+            <svg viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="button_button_icon_arrow__sBRHC">
               <path d="M0 6H12M12 6L7 1M12 6L7 11" stroke="currentColor" strokeWidth="1.5"></path>
             </svg>
           </span>
+          <span className="button_button_circle__94IGi"></span>
         </button>
       </div>
 
@@ -241,9 +220,9 @@ const AboutUs = () => {
         Using !important classes (prefixed with !) to override the imported external CSS 
         (ac733fec5634b0c4.css) which forces flex-col and hides the right section below 991px.
       */}
-      <div className="about_about_content__H2qJ9 !flex !flex-col md:!flex-row !items-center !justify-between py-[33px]">
+      <div className="about_about_content__H2qJ9">
 
-        <div className="about_about_content_left__6bbCk !w-full md:!w-1/2 lg:!max-w-[600px] shrink-0 pt-[20px]">
+        <div className="about_about_content_left__6bbCk">
           <div className="swiper swiper-fade relative min-h-[120px]">
             <AnimatePresence mode="wait">
               <motion.div
@@ -292,7 +271,7 @@ const AboutUs = () => {
         </div>
 
         {/* Override external CSS display:none on this element with !flex */}
-        <div className="about_about_content_right__Jr2SE !flex !w-full md:!w-1/2 !justify-center md:!justify-end mt-12 md:mt-0 lg:pl-[25px] relative z-10">
+        <div className="about_about_content_right__Jr2SE relative z-10">
           <div className="about-graph_circle__oCxRN w-full max-w-[500px] xl:max-w-[625px]">
             <div
               className="about-graph_box__kOXeL w-full pb-[100%] relative origin-center scale-90 lg:scale-100"
