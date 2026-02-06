@@ -3,9 +3,7 @@ import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import Services from "./components/Services";
 import AboutUs from "./components/AboutUs";
-import Portfolio from "./components/Portfolio";
-import Reviews from "./components/Reviews";
-import Contact from "./components/Contact";
+import SmartDevelopment from "./components/SmartDevelopment";
 import Footer from "./components/Footer";
 
 const App: React.FC = () => {
@@ -23,9 +21,7 @@ const App: React.FC = () => {
       <Marquee />
       <Services />
       <AboutUs />
-      <Portfolio />
-      <Reviews />
-      <Contact />
+      <SmartDevelopment />
       <Footer />
     </main>
   );
