@@ -160,7 +160,7 @@ const Circle = ({ circle, index, activeIndex, onHover, onLeave }) => {
     >
       <div className="relative w-full h-full">
         {circle.words.map((point) => (
-          <CirclePoint key={point.label} point={point} isActive={isHovered} />
+          <CirclePoint key={point.label} point={point} />
         ))}
       </div>
     </div>

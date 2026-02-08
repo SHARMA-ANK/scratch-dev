@@ -9,10 +9,10 @@ const SmartDevelopment = () => {
     });
 
     // Hand moves more significantly down
-    const yHand = useTransform(scrollYProgress, [0, 1], [0, 800]);
+    const yHand = useTransform(scrollYProgress, [0, 1], ["0%", "80%"]); // Use percentage for screen-independent movement
 
     // Screens move upwards 
-    const yScreens = useTransform(scrollYProgress, [0, 1], [0, -400]);
+    const yScreens = useTransform(scrollYProgress, [0, 1], [0, -40]);
 
     const renderScreenItem = (row: number, index: number, hasLogo: boolean = false, isEmpty: boolean = false) => {
         let fileIndex = 0;
@@ -90,25 +90,27 @@ const SmartDevelopment = () => {
                 </div>
             </div>
 
-            <div className="development_dev_phones__imyxO" style={{ position: 'relative', height: '100px', display: 'none' }}>
+            <div className="development_dev_phones__imyxO">
                 <img alt="phone-left" className="development_dev_phones_left__bMCN4" style={{ position: 'absolute', height: '100%', width: '100%', left: 0, top: 0, right: 0, bottom: 0, color: 'transparent' }} src="/media/phone-left.webp" />
                 <img alt="phone-right" className="development_dev_phones_right__HDoTA" style={{ position: 'absolute', height: '100%', width: '100%', left: 0, top: 0, right: 0, bottom: 0, color: 'transparent' }} src="/media/phone-right.webp" />
             </div>
 
             {/* Interaction Wrapper: Parallax Container */}
-            <div className="interaction-wrapper" style={{ position: 'relative', marginTop: '-100px' }}>
+            <div className="interaction-wrapper" style={{ position: 'relative', marginTop: 0 }}>
 
                 {/* Hand Layer: Absolute + Parallax Y from Top */}
                 <motion.div
                     className="development_dev_hand__CESVA"
                     style={{
                         position: 'absolute',
-                        top: '-300px', // Start higher up to overlap earlier
+                        top: -700,
                         left: 0,
                         width: '100%',
                         zIndex: 10,
                         y: yHand,
-                        pointerEvents: 'none'
+                        pointerEvents: 'none',
+                        margin: 0, // Override CSS margin
+                        height: 'auto' // Ensure height does not collapse
                     }}
                 >
                     <img

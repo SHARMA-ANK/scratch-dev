@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
     <section className="hero-background_back__4MnO3 h-screen">
       <video
         className="hero-background_video__O3B9N"
-        poster="/awsmd.com/awsmd.com/img/hero_poster.jpg"
+        poster="/media/hero.png"
         src="/media/hero.mp4"
         loop
         muted
