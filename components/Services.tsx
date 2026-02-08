@@ -24,7 +24,7 @@ const Services: React.FC = () => {
                 decoding="async"
                 data-nimg="fill"
                 className="services-item_service_img__w1TdE absolute inset-0 w-full h-full object-cover"
-                src="/awsmd.com/awsmd.com/_next/static/media/texture-1.e7b6d3a7.jpg"
+                src="awsmd.com/awsmd.com/_next/static/media/texture-1.e7b6d3a7.jpg"
               />
               <div className="services-item_service_container__Dx0k0 relative z-10 p-6 flex flex-col h-full">
                 <h2 className="services-item_service_title__a8ZZn text-4xl font-medium uppercase mb-4 text-black">
@@ -67,7 +67,7 @@ const Services: React.FC = () => {
                 decoding="async"
                 data-nimg="fill"
                 className="services-item_service_img__w1TdE absolute inset-0 w-full h-full object-cover"
-                src="/awsmd.com/awsmd.com/_next/static/media/texture-2.42807562.jpg"
+                src="awsmd.com/awsmd.com/_next/static/media/texture-2.42807562.jpg"
               />
               <div className="services-item_service_container__Dx0k0 relative z-10 p-6 flex flex-col h-full">
                 <h2 className="services-item_service_title__a8ZZn text-4xl font-medium uppercase mb-4 text-black">
@@ -114,7 +114,7 @@ const Services: React.FC = () => {
                 decoding="async"
                 data-nimg="fill"
                 className="services-item_service_img__w1TdE absolute inset-0 w-full h-full object-cover"
-                src="/awsmd.com/awsmd.com/_next/static/media/texture-1.e7b6d3a7.jpg"
+                src="awsmd.com/awsmd.com/_next/static/media/texture-1.e7b6d3a7.jpg"
               />
               <div className="services-item_service_container__Dx0k0 relative z-10 p-6 flex flex-col h-full">
                 <h2 className="services-item_service_title__a8ZZn text-4xl font-medium uppercase mb-4 text-black">

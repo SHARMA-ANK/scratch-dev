@@ -19,7 +19,7 @@ const SmartDevelopment = () => {
         if (index <= 2) fileIndex = index;
         if (index >= 4) fileIndex = index - 1;
 
-        const imgSrc = `/media/development/screen${row}-${fileIndex}.png`;
+        const imgSrc = `media/development/screen${row}-${fileIndex}.png`;
 
         if (isEmpty) {
             return (
@@ -91,8 +91,8 @@ const SmartDevelopment = () => {
             </div>
 
             <div className="development_dev_phones__imyxO">
-                <img alt="phone-left" className="development_dev_phones_left__bMCN4" style={{ position: 'absolute', height: '100%', width: '100%', left: 0, top: 0, right: 0, bottom: 0, color: 'transparent' }} src="/media/phone-left.webp" />
-                <img alt="phone-right" className="development_dev_phones_right__HDoTA" style={{ position: 'absolute', height: '100%', width: '100%', left: 0, top: 0, right: 0, bottom: 0, color: 'transparent' }} src="/media/phone-right.webp" />
+                <img alt="phone-left" className="development_dev_phones_left__bMCN4" style={{ position: 'absolute', height: '100%', width: '100%', left: 0, top: 0, right: 0, bottom: 0, color: 'transparent' }} src="media/phone-left.webp" />
+                <img alt="phone-right" className="development_dev_phones_right__HDoTA" style={{ position: 'absolute', height: '100%', width: '100%', left: 0, top: 0, right: 0, bottom: 0, color: 'transparent' }} src="media/phone-right.webp" />
             </div>
 
             {/* Interaction Wrapper: Parallax Container */}
@@ -117,10 +117,10 @@ const SmartDevelopment = () => {
                         alt="hand"
                         className="development_dev_hand_image__G9lS_"
                         style={{ position: 'relative', width: '100%', height: 'auto', maxWidth: '1870px', display: 'block', margin: '0 auto' }}
-                        src="/media/development/hand.webp"
+                        src="media/development/hand.webp"
                     />
                     <div className="dev-video_video__oxf1k">
-                        <video src="/media/development/phone.mp4" playsInline autoPlay muted loop></video>
+                        <video src="media/development/phone.mp4" playsInline autoPlay muted loop></video>
                     </div>
                 </motion.div>
 

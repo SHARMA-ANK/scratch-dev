@@ -8,7 +8,7 @@ const Header: React.FC = () => {
           <button className="home-link_logo__oWtLD">
             <img
               className="home-link_logo_icon__C3LLf"
-              src="/src/scratch_build_logo.png"
+              src="media/scratch_build_logo.png"
               alt="logo"
             />
             <span className="home-link_logo_text__T3Tis">Awsmd</span>

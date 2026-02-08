@@ -8475,10 +8475,10 @@ body {
     font-weight: 400;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/PlusJakartaSans-Regular.woff2) format("woff2"),
-        url(/fonts/PlusJakartaSans-Regular.woff) format("woff"),
-        url(/fonts/PlusJakartaSans-Regular.ttf) format("truetype"),
-        url(/fonts/PlusJakartaSans-Regular.eot) format("embedded-opentype");
+        url(./fonts/PlusJakartaSans-Regular.woff2) format("woff2"),
+        url(./fonts/PlusJakartaSans-Regular.woff) format("woff"),
+        url(./fonts/PlusJakartaSans-Regular.ttf) format("truetype"),
+        url(./fonts/PlusJakartaSans-Regular.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8486,10 +8486,10 @@ body {
     font-weight: 500;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/PlusJakartaSans-Medium.woff2) format("woff2"),
-        url(/fonts/PlusJakartaSans-Medium.woff) format("woff"),
-        url(/fonts/PlusJakartaSans-Medium.ttf) format("truetype"),
-        url(/fonts/PlusJakartaSans-Medium.eot) format("embedded-opentype");
+        url(./fonts/PlusJakartaSans-Medium.woff2) format("woff2"),
+        url(./fonts/PlusJakartaSans-Medium.woff) format("woff"),
+        url(./fonts/PlusJakartaSans-Medium.ttf) format("truetype"),
+        url(./fonts/PlusJakartaSans-Medium.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8497,10 +8497,10 @@ body {
     font-weight: 600;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/PlusJakartaSans-SemiBold.woff2) format("woff2"),
-        url(/fonts/PlusJakartaSans-SemiBold.woff) format("woff"),
-        url(/fonts/PlusJakartaSans-SemiBold.ttf) format("truetype"),
-        url(/fonts/PlusJakartaSans-SemiBold.eot) format("embedded-opentype");
+        url(./fonts/PlusJakartaSans-SemiBold.woff2) format("woff2"),
+        url(./fonts/PlusJakartaSans-SemiBold.woff) format("woff"),
+        url(./fonts/PlusJakartaSans-SemiBold.ttf) format("truetype"),
+        url(./fonts/PlusJakartaSans-SemiBold.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8508,10 +8508,10 @@ body {
     font-weight: 700;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/PlusJakartaSans-Bold.woff2) format("woff2"),
-        url(/fonts/PlusJakartaSans-Bold.woff) format("woff"),
-        url(/fonts/PlusJakartaSans-Bold.ttf) format("truetype"),
-        url(/fonts/PlusJakartaSans-Bold.eot) format("embedded-opentype");
+        url(./fonts/PlusJakartaSans-Bold.woff2) format("woff2"),
+        url(./fonts/PlusJakartaSans-Bold.woff) format("woff"),
+        url(./fonts/PlusJakartaSans-Bold.ttf) format("truetype"),
+        url(./fonts/PlusJakartaSans-Bold.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8519,10 +8519,10 @@ body {
     font-weight: 300;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/HelveticaNeueCyr-Light.woff2) format("woff2"),
-        url(/fonts/HelveticaNeueCyr-Light.woff) format("woff"),
-        url(/fonts/HelveticaNeueCyr-Light.ttf) format("truetype"),
-        url(/fonts/HelveticaNeueCyr-Light.eot) format("embedded-opentype");
+        url(./fonts/HelveticaNeueCyr-Light.woff2) format("woff2"),
+        url(./fonts/HelveticaNeueCyr-Light.woff) format("woff"),
+        url(./fonts/HelveticaNeueCyr-Light.ttf) format("truetype"),
+        url(./fonts/HelveticaNeueCyr-Light.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8530,10 +8530,10 @@ body {
     font-weight: 500;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/HelveticaNeueCyr-Medium.woff2) format("woff2"),
-        url(/fonts/HelveticaNeueCyr-Medium.woff) format("woff"),
-        url(/fonts/HelveticaNeueCyr-Medium.ttf) format("truetype"),
-        url(/fonts/HelveticaNeueCyr-Medium.eot) format("embedded-opentype");
+        url(./fonts/HelveticaNeueCyr-Medium.woff2) format("woff2"),
+        url(./fonts/HelveticaNeueCyr-Medium.woff) format("woff"),
+        url(./fonts/HelveticaNeueCyr-Medium.ttf) format("truetype"),
+        url(./fonts/HelveticaNeueCyr-Medium.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8541,10 +8541,10 @@ body {
     font-weight: 700;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/HeliosExtC.woff2) format("woff2"),
-        url(/fonts/HeliosExtC.woff) format("woff"),
-        url(/fonts/HeliosExtC.ttf) format("truetype"),
-        url(/fonts/HeliosExtC.eot) format("embedded-opentype");
+        url(./fonts/HeliosExtC.woff2) format("woff2"),
+        url(./fonts/HeliosExtC.woff) format("woff"),
+        url(./fonts/HeliosExtC.ttf) format("truetype"),
+        url(./fonts/HeliosExtC.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8552,10 +8552,10 @@ body {
     font-weight: 400;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/Inter-Regular.woff2) format("woff2"),
-        url(/fonts/Inter-Regular.woff) format("woff"),
-        url(/fonts/Inter-Regular.ttf) format("truetype"),
-        url(/fonts/Inter-Regular.eot) format("embedded-opentype");
+        url(./fonts/Inter-Regular.woff2) format("woff2"),
+        url(./fonts/Inter-Regular.woff) format("woff"),
+        url(./fonts/Inter-Regular.ttf) format("truetype"),
+        url(./fonts/Inter-Regular.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8563,10 +8563,10 @@ body {
     font-weight: 500;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/Inter-Medium.woff2) format("woff2"),
-        url(/fonts/Inter-Medium.woff) format("woff"),
-        url(/fonts/Inter-Medium.ttf) format("truetype"),
-        url(/fonts/Inter-Medium.eot) format("embedded-opentype");
+        url(./fonts/Inter-Medium.woff2) format("woff2"),
+        url(./fonts/Inter-Medium.woff) format("woff"),
+        url(./fonts/Inter-Medium.ttf) format("truetype"),
+        url(./fonts/Inter-Medium.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8574,10 +8574,10 @@ body {
     font-weight: 600;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/Inter-SemiBold.woff2) format("woff2"),
-        url(/fonts/Inter-SemiBold.woff) format("woff"),
-        url(/fonts/Inter-SemiBold.ttf) format("truetype"),
-        url(/fonts/Inter-SemiBold.eot) format("embedded-opentype");
+        url(./fonts/Inter-SemiBold.woff2) format("woff2"),
+        url(./fonts/Inter-SemiBold.woff) format("woff"),
+        url(./fonts/Inter-SemiBold.ttf) format("truetype"),
+        url(./fonts/Inter-SemiBold.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8585,10 +8585,10 @@ body {
     font-weight: 700;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/Inter-Bold.woff2) format("woff2"),
-        url(/fonts/Inter-Bold.woff) format("woff"),
-        url(/fonts/Inter-Bold.ttf) format("truetype"),
-        url(/fonts/Inter-Bold.eot) format("embedded-opentype");
+        url(./fonts/Inter-Bold.woff2) format("woff2"),
+        url(./fonts/Inter-Bold.woff) format("woff"),
+        url(./fonts/Inter-Bold.ttf) format("truetype"),
+        url(./fonts/Inter-Bold.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8596,10 +8596,10 @@ body {
     font-weight: 400;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/Fontspring-DEMO-freigeist-conregular.woff2) format("woff2"),
-        url(/fonts/Fontspring-DEMO-freigeist-conregular.woff) format("woff"),
-        url(/fonts/Fontspring-DEMO-freigeist-conregular.otf) format("opentype"),
-        url(/fonts/Fontspring-DEMO-freigeist-conregular.eot) format("embedded-opentype");
+        url(./fonts/Fontspring-DEMO-freigeist-conregular.woff2) format("woff2"),
+        url(./fonts/Fontspring-DEMO-freigeist-conregular.woff) format("woff"),
+        url(./fonts/Fontspring-DEMO-freigeist-conregular.otf) format("opentype"),
+        url(./fonts/Fontspring-DEMO-freigeist-conregular.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8607,10 +8607,10 @@ body {
     font-weight: 700;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/Fontspring-DEMO-freigeist-conbold.woff2) format("woff2"),
-        url(/fonts/Fontspring-DEMO-freigeist-conbold.woff) format("woff"),
-        url(/fonts/Fontspring-DEMO-freigeist-conbold.otf) format("opentype"),
-        url(/fonts/Fontspring-DEMO-freigeist-conbold.eot) format("embedded-opentype");
+        url(./fonts/Fontspring-DEMO-freigeist-conbold.woff2) format("woff2"),
+        url(./fonts/Fontspring-DEMO-freigeist-conbold.woff) format("woff"),
+        url(./fonts/Fontspring-DEMO-freigeist-conbold.otf) format("opentype"),
+        url(./fonts/Fontspring-DEMO-freigeist-conbold.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8618,10 +8618,10 @@ body {
     font-weight: 700;
     font-style: italic;
     src:
-        url(/awsmd.com/awsmd.com/fonts/Fontspring-DEMO-freigeist-conbolditalic.woff2) format("woff2"),
-        url(/fonts/Fontspring-DEMO-freigeist-conbolditalic.woff) format("woff"),
-        url(/fonts/Fontspring-DEMO-freigeist-conbolditalic.otf) format("opentype"),
-        url(/fonts/Fontspring-DEMO-freigeist-conbolditalic.eot) format("embedded-opentype");
+        url(./fonts/Fontspring-DEMO-freigeist-conbolditalic.woff2) format("woff2"),
+        url(./fonts/Fontspring-DEMO-freigeist-conbolditalic.woff) format("woff"),
+        url(./fonts/Fontspring-DEMO-freigeist-conbolditalic.otf) format("opentype"),
+        url(./fonts/Fontspring-DEMO-freigeist-conbolditalic.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8629,10 +8629,10 @@ body {
     font-weight: 400;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/TTCommons-Pro-DemiBold-Regular.woff2) format("woff2"),
-        url(/fonts/TTCommons-Pro-DemiBold-Regular.woff) format("woff"),
-        url(/fonts/TTCommons-Pro-DemiBold-Regular.otf) format("opentype"),
-        url(/fonts/TTCommons-Pro-DemiBold-Regular.eot) format("embedded-opentype");
+        url(./fonts/TTCommons-Pro-DemiBold-Regular.woff2) format("woff2"),
+        url(./fonts/TTCommons-Pro-DemiBold-Regular.woff) format("woff"),
+        url(./fonts/TTCommons-Pro-DemiBold-Regular.otf) format("opentype"),
+        url(./fonts/TTCommons-Pro-DemiBold-Regular.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8640,10 +8640,10 @@ body {
     font-weight: 600;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/Fontspring-DEMO-tt_commons_pro_demibold.woff2) format("woff2"),
-        url(/fonts/Fontspring-DEMO-tt_commons_pro_demibold.woff) format("woff"),
-        url(/fonts/Fontspring-DEMO-tt_commons_pro_demibold.otf) format("opentype"),
-        url(/fonts/Fontspring-DEMO-tt_commons_pro_demibold.eot) format("embedded-opentype");
+        url(./fonts/Fontspring-DEMO-tt_commons_pro_demibold.woff2) format("woff2"),
+        url(./fonts/Fontspring-DEMO-tt_commons_pro_demibold.woff) format("woff"),
+        url(./fonts/Fontspring-DEMO-tt_commons_pro_demibold.otf) format("opentype"),
+        url(./fonts/Fontspring-DEMO-tt_commons_pro_demibold.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8651,10 +8651,10 @@ body {
     font-weight: 500;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/MazzardH-Medium.woff2) format("woff2"),
-        url(/fonts/MazzardH-Medium.woff) format("woff"),
-        url(/fonts/MazzardH-Medium.ttf) format("truetype"),
-        url(/fonts/MazzardH-Medium.eot) format("embedded-opentype");
+        url(./fonts/MazzardH-Medium.woff2) format("woff2"),
+        url(./fonts/MazzardH-Medium.woff) format("woff"),
+        url(./fonts/MazzardH-Medium.ttf) format("truetype"),
+        url(./fonts/MazzardH-Medium.eot) format("embedded-opentype");
 }
 
 @font-face {
@@ -8662,10 +8662,10 @@ body {
     font-weight: 400;
     font-style: normal;
     src:
-        url(/awsmd.com/awsmd.com/fonts/Cedarville-Cursive.woff2) format("woff2"),
-        url(/fonts/Cedarville-Cursive.woff) format("woff"),
-        url(/fonts/Cedarville-Cursive.ttf) format("truetype"),
-        url(/fonts/Cedarville-Cursive.eot) format("embedded-opentype");
+        url(./fonts/Cedarville-Cursive.woff2) format("woff2"),
+        url(./fonts/Cedarville-Cursive.woff) format("woff"),
+        url(./fonts/Cedarville-Cursive.ttf) format("truetype"),
+        url(./fonts/Cedarville-Cursive.eot) format("embedded-opentype");
 }
 
 .blog-pagination-bullet {

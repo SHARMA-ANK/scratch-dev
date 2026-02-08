@@ -6,8 +6,8 @@ const Hero: React.FC = () => {
     <section className="hero-background_back__4MnO3 h-screen">
       <video
         className="hero-background_video__O3B9N"
-        poster="/media/hero.png"
-        src="/media/hero.mp4"
+        poster="media/hero.png"
+        src="media/hero.mp4"
         loop
         muted
         autoPlay
@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
               <button className="home-link_logo__oWtLD">
                 <img
                   className="home-link_logo_icon__C3LLf w-35"
-                  src="/media/scratch_build_logo.png"
+                  src="media/scratch_build_logo.png"
                   alt="logo"
                 />
                 <span className="home-link_logo_text__T3Tis"></span>
@@ -143,22 +143,22 @@ const Hero: React.FC = () => {
               <div className="hero-clutch_wrapper__uGlfY">
                 <div className="hero-clutch_box__VoqDg">
                   <svg className="hero-clutch_box_clutch__Y7F9Y">
-                    <use href="/awsmd.com/awsmd.com/img/sprite.svg#clutch"></use>
+                    <use href="awsmd.com/awsmd.com/img/sprite.svg#clutch"></use>
                   </svg>
                   <svg className="hero-clutch_box_star__9GLdo">
-                    <use href="/awsmd.com/awsmd.com/img/sprite.svg#star"></use>
+                    <use href="awsmd.com/awsmd.com/img/sprite.svg#star"></use>
                   </svg>
                   <svg className="hero-clutch_box_star__9GLdo">
-                    <use href="/awsmd.com/awsmd.com/img/sprite.svg#star"></use>
+                    <use href="awsmd.com/awsmd.com/img/sprite.svg#star"></use>
                   </svg>
                   <svg className="hero-clutch_box_star__9GLdo">
-                    <use href="/awsmd.com/awsmd.com/img/sprite.svg#star"></use>
+                    <use href="awsmd.com/awsmd.com/img/sprite.svg#star"></use>
                   </svg>
                   <svg className="hero-clutch_box_star__9GLdo">
-                    <use href="/awsmd.com/awsmd.com/img/sprite.svg#star"></use>
+                    <use href="awsmd.com/awsmd.com/img/sprite.svg#star"></use>
                   </svg>
                   <svg className="hero-clutch_box_star__9GLdo">
-                    <use href="/awsmd.com/awsmd.com/img/sprite.svg#star"></use>
+                    <use href="awsmd.com/awsmd.com/img/sprite.svg#star"></use>
                   </svg>
                   <p className="hero-clutch_box_rating__Qr9cA">4.9</p>
                 </div>
@@ -204,11 +204,11 @@ const Hero: React.FC = () => {
               ></iframe>
               <button className="hero-video_root_playBtn___iOLO hero-video_root_playBtn_deactivate__d42Im">
                 <img
-                  src="/awsmd.com/awsmd.com/_next/static/media/play.74b390f7.svg"
+                  src="awsmd.com/awsmd.com/_next/static/media/play.74b390f7.svg"
                   alt="play icon"
                 />
                 <img
-                  src="/awsmd.com/awsmd.com/_next/static/media/click-to-play.5ca0164c.png"
+                  src="awsmd.com/awsmd.com/_next/static/media/click-to-play.5ca0164c.png"
                   className="hero-video_root_playBtn_click__G1wfI"
                   alt="click icon"
                 />
